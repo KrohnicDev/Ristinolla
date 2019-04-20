@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2709F3FF226B4D5300F5BA36 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709F3FE226B4D5300F5BA36 /* MainNavigationController.swift */; };
+		2709F401226B4FA500F5BA36 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709F400226B4FA500F5BA36 /* MenuViewController.swift */; };
 		2793AEF42236EB5500A48F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2793AEF32236EB5500A48F1B /* AppDelegate.swift */; };
-		2793AEF62236EB5500A48F1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2793AEF52236EB5500A48F1B /* ViewController.swift */; };
+		2793AEF62236EB5500A48F1B /* RistiNollaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2793AEF52236EB5500A48F1B /* RistiNollaViewController.swift */; };
 		2793AEF92236EB5500A48F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2793AEF72236EB5500A48F1B /* Main.storyboard */; };
 		2793AEFB2236EB5500A48F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2793AEFA2236EB5500A48F1B /* Assets.xcassets */; };
 		2793AEFE2236EB5500A48F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2793AEFC2236EB5500A48F1B /* LaunchScreen.storyboard */; };
 		2793AF0B2236EC0E00A48F1B /* Ruutu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2793AF0A2236EC0E00A48F1B /* Ruutu.swift */; };
-		2793AF0D2236ECDA00A48F1B /* Peli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2793AF0C2236ECDA00A48F1B /* Peli.swift */; };
+		2793AF0D2236ECDA00A48F1B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2793AF0C2236ECDA00A48F1B /* Game.swift */; };
 		2793AF0F2236F4E800A48F1B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2793AF0E2236F4E800A48F1B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2709F3FE226B4D5300F5BA36 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		2709F400226B4FA500F5BA36 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2793AEF02236EB5500A48F1B /* Ristinolla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ristinolla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2793AEF32236EB5500A48F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2793AEF52236EB5500A48F1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2793AEF52236EB5500A48F1B /* RistiNollaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RistiNollaViewController.swift; sourceTree = "<group>"; };
 		2793AEF82236EB5500A48F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2793AEFA2236EB5500A48F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2793AEFD2236EB5500A48F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2793AEFF2236EB5500A48F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2793AF0A2236EC0E00A48F1B /* Ruutu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ruutu.swift; sourceTree = "<group>"; };
-		2793AF0C2236ECDA00A48F1B /* Peli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peli.swift; sourceTree = "<group>"; };
+		2793AF0C2236ECDA00A48F1B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		2793AF0E2236F4E800A48F1B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				2793AF0A2236EC0E00A48F1B /* Ruutu.swift */,
-				2793AF0C2236ECDA00A48F1B /* Peli.swift */,
+				2793AF0C2236ECDA00A48F1B /* Game.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -91,7 +95,9 @@
 		2793AF072236EBA100A48F1B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2793AEF52236EB5500A48F1B /* ViewController.swift */,
+				2793AEF52236EB5500A48F1B /* RistiNollaViewController.swift */,
+				2709F3FE226B4D5300F5BA36 /* MainNavigationController.swift */,
+				2709F400226B4FA500F5BA36 /* MenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 				TargetAttributes = {
 					2793AEEF2236EB5500A48F1B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -178,9 +185,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2793AF0B2236EC0E00A48F1B /* Ruutu.swift in Sources */,
-				2793AEF62236EB5500A48F1B /* ViewController.swift in Sources */,
+				2709F401226B4FA500F5BA36 /* MenuViewController.swift in Sources */,
+				2793AEF62236EB5500A48F1B /* RistiNollaViewController.swift in Sources */,
+				2709F3FF226B4D5300F5BA36 /* MainNavigationController.swift in Sources */,
 				2793AEF42236EB5500A48F1B /* AppDelegate.swift in Sources */,
-				2793AF0D2236ECDA00A48F1B /* Peli.swift in Sources */,
+				2793AF0D2236ECDA00A48F1B /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +344,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.joonasjunttila.Ristinolla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -353,7 +362,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.joonasjunttila.Ristinolla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

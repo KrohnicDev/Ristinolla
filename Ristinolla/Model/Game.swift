@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Peli {
+class Game {
     var vuoro: Vuoro
-    var voittaja: Voittaja = .eiSelvilla
+    var voittaja: RuudunTila = .tyhjä
     var tilanne = [RuudunTila]()
     private var viimeisinSiirto = 0
     let voittoonTarvittavaSarja: Int
@@ -30,6 +30,7 @@ class Peli {
         ruudukonKorkeus = korkeus
         ruudukonLeveys = leveys
         voittoonTarvittavaSarja = voitto
+        alustaPelitilanne()
     }
     
     private func alustaPelitilanne(){
@@ -63,13 +64,24 @@ class Peli {
     
     private func validiSiirto() -> Bool {
         // vältetään virhetilanne
-        if viimeisinSiirto > tilanne.count { return false }
+        if viimeisinSiirto > tilanne.count {
+            print("Ruutu \(viimeisinSiirto) on suurempi kuin ruutujen määrä \(tilanne.count) + 1")
+            return false
+        }
         
         // tarkistetaan, että peli on kesken
-        if voittaja != .eiSelvilla { return false }
+        if voittaja != .tyhjä {
+            print("peli on jo päättynyt, voittaja oli \(voittaja)")
+            return false
+        }
         
         // tarkistetaan, että ruutu on vapaa
-        if tilanne[viimeisinSiirto - 1] != .tyhjä { return false }
+        let indeksi = viimeisinSiirto - 1
+        let ruutu = tilanne[indeksi]
+        if ruutu != .tyhjä {
+            print("Ruutu \(viimeisinSiirto) ei ole vapaa. Siinä on jo \(ruutu)")
+            return false
+        }
         
         return true
     }
@@ -95,7 +107,7 @@ class Peli {
         var edellinenRuutu: RuudunTila = .tyhjä
         
         // käydään läpi kaikki sarakkeen ruudut
-        while indeksi < tilanne.count - 1 {
+        while indeksi < tilanne.count {
             let ruutu = tilanne[indeksi]
             
             // jos peräkkäiset ruudut ovat samat mutta eivät tyhjiä
@@ -112,7 +124,7 @@ class Peli {
             
             // kolme samaa voittaa
             if sarjanPituus == voittoonTarvittavaSarja {
-                voittaja = .risti
+                voittaja = ruutu
                 break
             }
         }
@@ -124,13 +136,13 @@ class Peli {
         var indeksi = 0
         
         // käydään läpi kaikki rivit
-        rivit: while indeksi < tilanne.count - 1 {
+        rivit: while indeksi < tilanne.count {
             
             var sarjanPituus = 1
             var edellinenRuutu: RuudunTila = .tyhjä
             
             // käydään läpi rivin ruudut
-            ruudut: for rivinIndeksi in 0 ..< ruudukonKorkeus {
+            ruudut: for rivinIndeksi in 0 ..< ruudukonLeveys {
                 let ruutu = tilanne[indeksi + rivinIndeksi]
                 if ruutu == edellinenRuutu && ruutu != .tyhjä {
                     sarjanPituus = sarjanPituus + 1
@@ -142,7 +154,7 @@ class Peli {
                 
                 // tarkistetaan voitto
                 if sarjanPituus == voittoonTarvittavaSarja {
-                    voittaja = .risti
+                    voittaja = ruutu
                     break rivit
                 }
             }
@@ -164,7 +176,7 @@ class Peli {
         
         // käydään läpi koko ruudukko siten, että sarja mahtuu valitun ruudun perään
         let korkeus = ruudukonKorkeus - voittoonTarvittavaSarja + 1
-        let leveys = ruudukonKorkeus - voittoonTarvittavaSarja + 1
+        let leveys = ruudukonLeveys - voittoonTarvittavaSarja + 1
         var indeksi = 0
         
         for x in 0 ..< leveys {
@@ -221,7 +233,7 @@ class Peli {
                 edellinenRuutu = ruutu
                 
                 if sarjanPituus == voittoonTarvittavaSarja {
-                    voittaja = .risti
+                    voittaja = ruutu
                     break kombot
                 }
             }
@@ -233,7 +245,7 @@ class Peli {
         for indeksi in 0 ..< tilanne.count {
             tilanne[indeksi] = .tyhjä
         }
-        voittaja = .eiSelvilla
+        voittaja = .tyhjä
         vuoro = .risti
         viimeisinSiirto = -1
     }
