@@ -12,6 +12,9 @@
 		2793AEF92236EB5500A48F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2793AEF72236EB5500A48F1B /* Main.storyboard */; };
 		2793AEFB2236EB5500A48F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2793AEFA2236EB5500A48F1B /* Assets.xcassets */; };
 		2793AEFE2236EB5500A48F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2793AEFC2236EB5500A48F1B /* LaunchScreen.storyboard */; };
+		2793AF0B2236EC0E00A48F1B /* Ruutu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2793AF0A2236EC0E00A48F1B /* Ruutu.swift */; };
+		2793AF0D2236ECDA00A48F1B /* Peli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2793AF0C2236ECDA00A48F1B /* Peli.swift */; };
+		2793AF0F2236F4E800A48F1B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2793AF0E2236F4E800A48F1B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		2793AEFA2236EB5500A48F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2793AEFD2236EB5500A48F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2793AEFF2236EB5500A48F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2793AF0A2236EC0E00A48F1B /* Ruutu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ruutu.swift; sourceTree = "<group>"; };
+		2793AF0C2236ECDA00A48F1B /* Peli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peli.swift; sourceTree = "<group>"; };
+		2793AF0E2236F4E800A48F1B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 		2793AEE72236EB5400A48F1B = {
 			isa = PBXGroup;
 			children = (
+				2793AF0E2236F4E800A48F1B /* Default-568h@2x.png */,
 				2793AEF22236EB5500A48F1B /* Ristinolla */,
 				2793AEF12236EB5500A48F1B /* Products */,
 			);
@@ -54,14 +61,48 @@
 		2793AEF22236EB5500A48F1B /* Ristinolla */ = {
 			isa = PBXGroup;
 			children = (
-				2793AEF32236EB5500A48F1B /* AppDelegate.swift */,
-				2793AEF52236EB5500A48F1B /* ViewController.swift */,
-				2793AEF72236EB5500A48F1B /* Main.storyboard */,
-				2793AEFA2236EB5500A48F1B /* Assets.xcassets */,
-				2793AEFC2236EB5500A48F1B /* LaunchScreen.storyboard */,
 				2793AEFF2236EB5500A48F1B /* Info.plist */,
+				2793AEFC2236EB5500A48F1B /* LaunchScreen.storyboard */,
+				2793AF092236EBBE00A48F1B /* Resources */,
+				2793AF072236EBA100A48F1B /* Controller */,
+				2793AF062236EB9B00A48F1B /* View */,
+				2793AF052236EB8C00A48F1B /* Model */,
 			);
 			path = Ristinolla;
+			sourceTree = "<group>";
+		};
+		2793AF052236EB8C00A48F1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2793AF0A2236EC0E00A48F1B /* Ruutu.swift */,
+				2793AF0C2236ECDA00A48F1B /* Peli.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2793AF062236EB9B00A48F1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2793AEF72236EB5500A48F1B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2793AF072236EBA100A48F1B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2793AEF52236EB5500A48F1B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2793AF092236EBBE00A48F1B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2793AEFA2236EB5500A48F1B /* Assets.xcassets */,
+				2793AEF32236EB5500A48F1B /* AppDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2793AEFE2236EB5500A48F1B /* LaunchScreen.storyboard in Resources */,
+				2793AF0F2236F4E800A48F1B /* Default-568h@2x.png in Resources */,
 				2793AEFB2236EB5500A48F1B /* Assets.xcassets in Resources */,
 				2793AEF92236EB5500A48F1B /* Main.storyboard in Resources */,
 			);
@@ -135,8 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2793AF0B2236EC0E00A48F1B /* Ruutu.swift in Sources */,
 				2793AEF62236EB5500A48F1B /* ViewController.swift in Sources */,
 				2793AEF42236EB5500A48F1B /* AppDelegate.swift in Sources */,
+				2793AF0D2236ECDA00A48F1B /* Peli.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
